@@ -24,6 +24,7 @@ Route::get('/user-form', function () {
 Route::get('/hello', function () {
     return view('Hello Laravel');
 })->name('greeting');
+
 Route::get('/show-greeting', [WelcomeController::class, 'showGreeting']);
 Route::get('/redirect-greeting', [WelcomeController::class, 'redirectGreeting']);
 
@@ -43,3 +44,5 @@ Route::put('/update-user/{id}',[UserController::class, 'updateUser']);
 Route::patch('/modify-user/{id}',[UserController::class, 'modifyeUser']);
 //DELETE Request
 Route::delete('/delete-user/{id}',[UserController::class, 'deleteUser']);
+
+//things to remember: git status, git add ., git commit -m "explanation", git push origin main, git pull origin main
