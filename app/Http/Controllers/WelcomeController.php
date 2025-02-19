@@ -15,4 +15,8 @@ class WelcomeController extends Controller
     public function redirectGreeting(){
        return redirect()->route('greeting');
     }
+ 
 }
+
+//public function showAboutMe(){
+    echo "Show About Me page";

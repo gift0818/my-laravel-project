@@ -25,8 +25,16 @@ Route::get('/hello', function () {
     return view('Hello Laravel');
 })->name('greeting');
 
+//quiz route
+Route::get('/about-me', function () {
+    return view('about_me');
+});
+
 Route::get('/show-greeting', [WelcomeController::class, 'showGreeting']);
 Route::get('/redirect-greeting', [WelcomeController::class, 'redirectGreeting']);
+
+//quiz get
+Route::get('/show-aboutMe', [WelcomeController::class, 'showAboutMe']);
 
 //GET with optional parameters
 Route::get('/user/{name?}', function ($name = null) {
